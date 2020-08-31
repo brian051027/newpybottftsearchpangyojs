@@ -15,7 +15,7 @@ import requests
 import unicodedata
 import time
 client = discord.Client()
-token = "NzQ4MzYwOTQ2NDk3NDg2OTQy.X0cTcQ.uJmCtOxHCV3CRUAuhNm_pedoy0o"
+token = ""
 
 def returnStatsTFT(bs):
     # 통계 정보
@@ -200,4 +200,5 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://attach.s.op.gg/forum/20170922204322_434504.png')
             await message.channel.send("Error : Not existing nickname", embed=embed)
 
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
